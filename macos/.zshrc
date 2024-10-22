@@ -80,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git web-search)
+plugins=(git zsh-autosuggestions web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,8 +118,17 @@ source $HOME/.brewconfig.zsh
 alias vi=nvim
 alias vim=nvim
 alias mini='~/mini-moulinette/mini-moul.sh'
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 #HHH
 # curl -Ls https://bit.ly/2SXpdAI | sh
 # alias nsilentcorner="curl -Ls https://bit.ly/3zSxeaE | sh && echo yes that\'s us -- REMEMBER THE NAME🧐"
+alias ip='curl ifconfig.me/ip'
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 source ~/.42-wizzard.sh
 zsh ~/.42-wizzard-updater.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
